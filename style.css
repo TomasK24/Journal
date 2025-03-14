@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+body {
+    font-family: 'Playpen Sans', sans-serif;
+    background-color: #8E9AAF;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ribbon Title */
+.title {
+    display: block;
+    width: 100%;
+    background: #FEEAFA;
+    font-size: 45px;
+    color: #776d6d;
+    padding: 20px 0px; /* Adjust top/bottom */
+    text-align: center;
+    animation: glow 2s infinite alternate;
+    position: relative; 
+    box-sizing: border-box; /* Make sure padding does not affect overall width */
+}
+
+/* Journal Layout */
+.journal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+/* Individual Entry Row */
+.entry-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Left Side - Date & Plans */
+.entry-left {
+    width: 20%;
+    text-align: left;
+    color: white;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.plans {
+    font-style: italic;
+    color: #FEEAFA;
+}
+
+/* Center - Main Journal Entry */
+.entry {
+    width: 50%;
+    max-width: 850px;
+    background: #FEEAFA;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Right Side - Notes */
+.entry-right {
+    width: 20%;
+    text-align: left;
+    color: #FEEAFA;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.notes {
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtle hover animation for entries */
+.entry:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Glowing effect for title */
+@keyframes glow {
+    from { 
+        text-shadow: 0 0 5px #dee2ff, 0 0 10px #b8c0ff00; 
+    }
+    to { 
+        text-shadow: 0 0 10px #dee2ff, 0 0 20px #5c618b; 
+    }
+}
