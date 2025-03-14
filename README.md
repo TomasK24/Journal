@@ -1,5 +1,8 @@
 # Tomas' Journal
 
+🔗 Live Website
+Check out Tomas' Journal at 👉 TomasJournal.com
+
 Tomas' Journal is a personal web-based journal where I track my progress in web development and other projects. The purpose of this project is to document the things I am learning, build simple web projects, and keep a record of my growth as a developer.
 
 ## Features
